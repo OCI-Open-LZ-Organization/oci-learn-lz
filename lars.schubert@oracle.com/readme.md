@@ -1,1 +1,0 @@
-lars.schubert@oracle.com
