@@ -36,7 +36,7 @@ The diagram below presents the key functional elements of the landing zone, in a
 
 &nbsp;
 
-<img src="diagrams/oci_learn_lz-fun-erd.jpg" alt= “” width="1200" height="value">
+<img src="Diagrams/oci_learn_lz-fun-erd.jpg" alt= “” width="1200" height="value">
 
 &nbsp;
 
