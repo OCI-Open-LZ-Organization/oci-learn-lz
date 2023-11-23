@@ -51,7 +51,7 @@ Your objective is to update the tenancy structure with a missing application **c
 | 1 | Open the [Drawio design](/OCI_Learn_LZ.drawio) file, and select tab "SEC - EXERCISE #1" |
 | 2 | Enable the Layer "STEP 2 - EXERCISE". Make sure the STEP 1 layer is enabled. |
 | 3 | Review the target tenancy structure design with the two domains. The image below presents it. |
-| 4 | Update the tenancy structure IaC configuration with the new changes in your **local user folder oci_learn_lz_iam.yml** file. |
+| 4 | Update the tenancy structure IaC configuration with the new changes in your **[local user folder](/users/)** **oci_learn_lz_iam.yml** file. |
 
 
 &nbsp; 

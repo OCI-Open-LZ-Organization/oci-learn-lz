@@ -31,7 +31,7 @@ Your objective is to review the initial network structure created by your team, 
 | 1 | Open the [Drawio design](/OCI_Learn_LZ.drawio) file, and select tab "NET - EXERCISE #2" |
 | 2 | Enable the Layer "STEP 1 - TEMPLATE". Make sure the STEP 2 layer is disabled. |
 | 3 | Review the network structure design that is already created. The image below presents it. |
-| 4 | Review the network structure configuration in you **local user folder**  **oci_learn_lz_network.yml** file. |
+| 4 | Review the network structure configuration in you **[local user folder](/users/)**  **oci_learn_lz_network.yml** file. |
 
 &nbsp; 
 
@@ -50,7 +50,7 @@ Your objective is to update the network structure and add the network elements f
 | 1 | Open the [Drawio design](/OCI_Learn_LZ.drawio) file, and select tab "NET - EXERCISE #2" |
 | 2 | Enable the Layer "STEP 2 - EXERCISE". Make sure the STEP 1 layer is enabled. |
 | 3 | Review the target network structure design for the domain. The image below presents it. |
-| 4 | Update the network structure IaC configuration with the new changes in your **local oci_learn_lz_network.yml** file. |
+| 4 | Update the network structure IaC configuration with the new changes in your **[local user folder](/users/)** **oci_learn_lz_network.yml** file. |
 
 
 
