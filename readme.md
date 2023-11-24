@@ -35,7 +35,7 @@ We highly recommend using an IDE for the exercises (e.g., Visual Studio Code), a
 ### 2.3 Clone this Repository
 Before you start it's essential to **clone this Git repository**. You can clone it through the IDE or Git command line. You will need this to have your **local working copy**.
 
-This repository will be referenced in the exercises as **OCI-LEARN-LZ-OPS-REPO**. Whenever you need to test changes you will push your **local** configuration files into your [**remote** user folder](/users/), on the **OCI-LEARN-LZ-OPS-REPO** main branch - for them to be visible by ORM.
+This repository will be referenced in the exercises as **OCI-LEARN-LZ-OPS-REPO**. Whenever you need to test changes you will push your **local** configuration files into your [**remote** user folder](/users/), on the **OCI-LEARN-LZ-OPS-REPO** main branch. You will need public raw links to these files in ORM, for each exercise.
 
 
 &nbsp; 
