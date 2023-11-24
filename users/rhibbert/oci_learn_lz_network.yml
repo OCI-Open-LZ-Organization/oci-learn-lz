@@ -1,3 +1,8 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            #
+# ####################################################################################################### #
+
 ---
 network_configuration:
   default_enable_cis_checks: false
@@ -52,16 +57,14 @@ network_configuration:
               stateless: false
           display_name: vcn-fra-hub
           dns_label: vcnfrahub
-          is_attach_drg: false
-          is_create_igw: false
           is_ipv6enabled: false
           is_oracle_gua_allocation_enabled: false
           route_tables:
-            SUBNET-H-RT-KEY:
-              display_name: subnet-h-rt
+            SUBNET-HUB-RT-KEY:
+              display_name: subnet-hub-rt
               route_rules: {}
           subnets:
-            SUBNET-H-KEY:
+            SUBNET-HUB-KEY:
               cidr_block: 10.0.0.0/26
               dhcp_options_key: default_dhcp_options
               display_name: sn-fra-hub-fw
@@ -69,7 +72,7 @@ network_configuration:
               ipv6cidr_blocks: []
               prohibit_internet_ingress: true
               prohibit_public_ip_on_vnic: true
-              route_table_key: SUBNET-H-RT-KEY
+              route_table_key: SUBNET-HUB-RT-KEY
               security_list_keys:
               - default_security_list
     CHANNELS:
