@@ -22,21 +22,21 @@ Welcome to the **Open Learn LZ**, a set of **exercises** to learn how to **desig
 ### 2.1 Have an OCI Account
 Anyone can run the OCI-Learn-LZ exercises. If you don't have an OCI Paid Account, to execute the exercises you will need and [OCI Free Tier](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier.htm) account.
 
-**Note** that an OCI Free Tier account after a predefined time or initial credits consumed, is automatically limited to use Always Free resources - if not upgraded. If this is your case, you need to free all VCNs resources as exercise 2 will use two VCNs which is the limit of the always free model.
+**Note** that an OCI Free Tier account after a predefined time or initial credits consumed, is automatically limited to use Always Free resources - if not upgraded. If this is your case, you need to free all VCNs resources as exercise 2 will use two VCNs which is the limit of the always-free model.
 
 
 &nbsp; 
 
-### 2.2 Clone this Repository
-Before you progress it's essential to **clone this Git repository**, as you will need to push configuration files into your user folder - for them to be visible by ORM. 
-
-This repository will be referenced in the exercises as **OCI-LEARN-LZ-OPS-REPO**.
+### 2.2 Use an IDE integrated with GIT 
+We highly recommend using an IDE for the exercises (e.g., Visual Studio Code), as it helps with the formatting of configuration files. The same IDE can be integrated with GIT, having the development tools all in the same place.
 
 &nbsp; 
 
-### 2.3 Use an IDE integrated with GIT 
-We highly recommend using an IDE for the exercises (e.g., Visual Builder Studio), as it helps with the formatting of yaml files. The same IDE can be integrated with GIT, having the development tools all in the same place.
-After having the IDE set, clone the repository created in step 2.2 to have your local working copy.
+### 2.3 Clone this Repository
+Before you start it's essential to **clone this Git repository**. You can clone it through the IDE or Git command line. You will need this to have your **local working copy**.
+
+This repository will be referenced in the exercises as **OCI-LEARN-LZ-OPS-REPO**. Whenever you need to test changes you will push your **local** configuration files into your [**remote** user folder](/users/), on the **OCI-LEARN-LZ-OPS-REPO** main branch - for them to be visible by ORM.
+
 
 &nbsp; 
 
