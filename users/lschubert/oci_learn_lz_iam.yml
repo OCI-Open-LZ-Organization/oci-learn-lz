@@ -35,12 +35,12 @@ compartments_configuration:
           name: cmp-core-network
           description: oci-learn-lz Core domain shared networking compartment
             within the domain
-    #     CMP-CORE-NONPROD-KEY:
-    #       name: cmp-core-nonprod
-    #       description: oci-learn-lz Core domain for non-prod environment compartment
-    #     CMP-CORE-PROD-KEY:
-    #       name: cmp-core-prod
-    #       description: oci-learn-lz Core domain for prod environment compartment
+        CMP-CORE-NONPROD-KEY:
+          name: cmp-core-nonprod
+          description: oci-learn-lz Core domain for non-prod environment compartment
+        CMP-CORE-PROD-KEY:
+          name: cmp-core-prod
+          description: oci-learn-lz Core domain for prod environment compartment
 groups_configuration:
   groups: {}
 dynamic_groups_configuration:
