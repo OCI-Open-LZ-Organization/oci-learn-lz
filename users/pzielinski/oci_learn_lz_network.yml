@@ -26,7 +26,7 @@ network_configuration:
               DRG-CHANNELS-VCN-H-ATTACH-KEY:
                 display_name: drg-channels-vcn-h-attach
                 network_details:
-                  attached_resource_key: VCN-CHANNELS-KEY
+                  attached_resource_key: VCN-CHANNELS-NP-KEY
                   type: VCN                  
       vcns:
         VCN-HUB-KEY:
@@ -75,7 +75,7 @@ network_configuration:
               route_table_key: SUBNET-HUB-RT-KEY
               security_list_keys:
               - default_security_list
-        VCN-CMP-CHANNELS-KEY:
+        VCN-CHANNELS-NP-KEY:
           block_nat_traffic: false
           cidr_blocks:
           - 10.1.0.0/24
