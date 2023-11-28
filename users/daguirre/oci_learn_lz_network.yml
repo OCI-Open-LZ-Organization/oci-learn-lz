@@ -119,7 +119,7 @@ network_configuration:
               cidr_block: 10.0.1.0/26
               dhcp_options_key: default_dhcp_options
               display_name: sn-channels-np-common
-              dns_label: snchannelsnpcommon
+              dns_label: snchannelsnpcom
               ipv6cidr_blocks: []
               prohibit_internet_ingress: true
               prohibit_public_ip_on_vnic: true
