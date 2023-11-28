@@ -23,6 +23,11 @@ network_configuration:
                 network_details:
                   attached_resource_key: VCN-HUB-KEY
                   type: VCN
+              DRG-CHANNELS-VCN-S-ATTACH-KEY:
+                display_name: drg-channels-vcn-s-attach
+                network_details:
+                  attached_resource_key: VCN-CHANNELS-KEY
+                  type: VCN
       vcns:
         VCN-HUB-KEY:
           block_nat_traffic: false
@@ -74,16 +79,6 @@ network_configuration:
       category_compartment_key: CMP-CHANNELS-NETWORK-KEY
       category_freeform_tags:
         vision-sub-environment: channels
-      non_vcn_specific_gateways:
-        dynamic_routing_gateways:
-          DRG-HUB-KEY:
-            display_name: drg-lon-hub
-            drg_attachments:
-              DRG-CHANNELS-VCN-S-ATTACH-KEY:
-                display_name: drg-channels-vcn-s-attach
-                network_details:
-                  attached_resource_key: VCN-CHANNELS-KEY
-                  type: VCN
       vcns:
         VCN-CHANNELS-KEY:
           block_nat_traffic: false
