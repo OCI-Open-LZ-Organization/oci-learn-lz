@@ -83,7 +83,7 @@ network_configuration:
         VCN-CHANNELS-NP-KEY:
           block_nat_traffic: false
           cidr_blocks:
-          - 10.0.0.1/24
+          - 10.0.1.0/24
           default-security-list:
             egress_rules:
             - description: egress to 0.0.0.0/0 over ALL protocols
@@ -116,7 +116,7 @@ network_configuration:
               route_rules: {}
           subnets:
             SUBNET-CHANNELS-NP-COM-KEY:
-              cidr_block: 10.0.0.1/26
+              cidr_block: 10.0.1.0/26
               dhcp_options_key: default_dhcp_options
               display_name: sn-fra-channels-np-com
               dns_label: snfrachannpcom
