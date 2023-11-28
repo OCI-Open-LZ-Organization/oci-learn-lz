@@ -16,7 +16,7 @@ network_configuration:
       non_vcn_specific_gateways:
         dynamic_routing_gateways:
           DRG-HUB-KEY:
-            display_name: drg-fra-hub
+            display_name: drg-lon-hub
             drg_attachments:
               DRG-HUB-VCN-H-ATTACH-KEY:
                 display_name: drg-hub-vcn-h-attach
@@ -50,8 +50,8 @@ network_configuration:
               src: 0.0.0.0/0
               src_type: CIDR_BLOCK
               stateless: false
-          display_name: vcn-fra-hub
-          dns_label: vcnfrahub
+          display_name: vcn-lon-hub
+          dns_label: vcnlonhub
           is_ipv6enabled: false
           is_oracle_gua_allocation_enabled: false
           route_tables:
@@ -62,8 +62,8 @@ network_configuration:
             SUBNET-HUB-KEY:
               cidr_block: 10.0.0.0/26
               dhcp_options_key: default_dhcp_options
-              display_name: sn-fra-hub-fw
-              dns_label: snfrahubfw
+              display_name: sn-lon-hub-fw
+              dns_label: snlonhubfw
               ipv6cidr_blocks: []
               prohibit_internet_ingress: true
               prohibit_public_ip_on_vnic: true
