@@ -1,0 +1,100 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            #
+# ####################################################################################################### #
+
+---
+compartments_configuration:
+  enable_delete: true
+  compartments:
+    CMP-CORE-KEY:
+      name: prog-cmp-lin-root
+      description: Project dedicated compartment
+      children:
+        CMP-CORE-APP-KEY:
+          name: prog-cmp-lin-app
+          description: Application compartment for project prog
+        CMP-CORE-DB-KEY:
+          name: prog-cmp-lin-db
+          description: Database compartment for project prog
+        CMP-CORE-SEC-KEY:
+          name: prog-cmp-lin-security
+          description: Security compartment for project prog
+        CMP-CORE-NETWORK-KEY:
+          name: prog-cmp-lin-network
+          description: Network compartment for project prog
+network_configuration:
+  default_enable_cis_checks: false
+  default_freeform_tags:
+    vision-environment: vision
+  network_configuration_categories:
+    HUB:
+      category_compartment_key: CMP-CORE-NETWORK-KEY
+      category_freeform_tags:
+        vision-sub-environment: hub
+      non_vcn_specific_gateways:
+        dynamic_routing_gateways:
+          DRG-HUB-KEY:
+            display_name: prog-drg-lin-hub
+            drg_attachments:
+              DRG-HUB-VCN-H-ATTACH-KEY:
+                display_name: prog-drgatt-lin-001
+                network_details:
+                  attached_resource_key: VCN-DEV-KEY
+                  type: VCN
+      vcns:
+        VCN-DEV-KEY:
+          block_nat_traffic: false
+          cidr_blocks:
+          - 172.16.0.0/24
+          default-security-list:
+            egress_rules:
+            - description: egress to 0.0.0.0/0 over ALL protocols
+              dst: 0.0.0.0/0
+              dst_type: CIDR_BLOCK
+              protocol: ALL
+              stateless: false
+            ingress_rules:
+            - description: ingress from 0.0.0.0/0 over TCP22
+              dst_port_max: 22
+              dst_port_min: 22
+              protocol: TCP
+              src: 0.0.0.0/0
+              src_type: CIDR_BLOCK
+              stateless: false
+          display_name: prog-vcn-lin-dev
+          dns_label: vcnlindev
+          is_ipv6enabled: false
+          is_oracle_gua_allocation_enabled: false
+          route_tables:
+            SUBNET-HUB-RT-KEY:
+              display_name: prog-rt-lin-dev-001
+              route_rules: {}
+          subnets:
+            SUBNET-DEV-KEY:
+              cidr_block: 172.16.0.64/26
+              dhcp_options_key: default_dhcp_options
+              display_name: prog-sn-lin-web
+              dns_label: snlindevweb
+              ipv6cidr_blocks: []
+              prohibit_internet_ingress: false
+              prohibit_public_ip_on_vnic: false
+              route_table_key: SUBNET-HUB-RT-KEY
+              security_list_keys:
+              - default_security_list
+            SUBNET-DEV-KEY:
+              cidr_block: 10.0.0.0/26
+              dhcp_options_key: default_dhcp_options
+              display_name: prog-sn-lin-app
+              dns_label: snlindevapp
+              ipv6cidr_blocks: []
+              prohibit_internet_ingress: true
+              prohibit_public_ip_on_vnic: true
+              route_table_key: SUBNET-HUB-RT-KEY
+              security_list_keys:
+              - default_security_list
+groups_configuration:
+  groups: {}
+dynamic_groups_configuration:
+  dynamic_groups: {}
+policies_configuration: {}
