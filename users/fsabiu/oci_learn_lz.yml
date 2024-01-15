@@ -8,21 +8,21 @@ compartments_configuration:
   enable_delete: true
   compartments:
     CMP-CORE-KEY:
-      name: ens-cmp-lin-root
+      name: infra-cmp-lin-root
       description: Project dedicated compartment
       children:
         CMP-CORE-APP-KEY:
-          name: ens-cmp-lin-app
-          description: Application compartment for project ens
+          name: infra-cmp-lin-app
+          description: Application compartment for project infra
         CMP-CORE-DB-KEY:
-          name: ens-cmp-lin-db
-          description: Database compartment for project ens
+          name: infra-cmp-lin-db
+          description: Database compartment for project infra
         CMP-CORE-SEC-KEY:
-          name: ens-cmp-lin-security
-          description: Security compartment for project ens
+          name: infra-cmp-lin-security
+          description: Security compartment for project infra
         CMP-CORE-NETWORK-KEY:
-          name: ens-cmp-lin-network
-          description: Network compartment for project ens
+          name: infra-cmp-lin-network
+          description: Network compartment for project infra
 network_configuration:
   default_enable_cis_checks: false
   default_freeform_tags:
@@ -35,10 +35,10 @@ network_configuration:
       non_vcn_specific_gateways:
         dynamic_routing_gateways:
           DRG-HUB-KEY:
-            display_name: ens-drg-lin-hub
+            display_name: infra-drg-lin-hub
             drg_attachments:
               DRG-HUB-VCN-H-ATTACH-KEY:
-                display_name: ens-drgatt-lin-001
+                display_name: infra-drgatt-lin-001
                 network_details:
                   attached_resource_key: VCN-DEV-KEY
                   type: VCN
@@ -62,13 +62,13 @@ network_configuration:
               src: 0.0.0.0/0
               src_type: CIDR_BLOCK
               stateless: false
-          display_name: ens-vcn-lin-dev
+          display_name: infra-vcn-lin-dev
           dns_label: vcnlindev
           is_ipv6enabled: false
           is_oracle_gua_allocation_enabled: false
           route_tables:
             SUBNET-HUB-RT-KEY:
-              display_name: ens-rt-lin-dev-001
+              display_name: infra-rt-lin-dev-001
               route_rules: {}
           subnets:
             SUBNET-DEV-KEY:
