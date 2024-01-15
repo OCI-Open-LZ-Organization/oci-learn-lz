@@ -8,21 +8,21 @@ compartments_configuration:
   enable_delete: true
   compartments:
     CMP-CORE-KEY:
-      name: prog-cmp-lin-root
+      name: ens-cmp-lin-root
       description: Project dedicated compartment
       children:
         CMP-CORE-APP-KEY:
-          name: prog-cmp-lin-app
-          description: Application compartment for project prog
+          name: ens-cmp-lin-app
+          description: Application compartment for project ens
         CMP-CORE-DB-KEY:
-          name: prog-cmp-lin-db
-          description: Database compartment for project prog
+          name: ens-cmp-lin-db
+          description: Database compartment for project ens
         CMP-CORE-SEC-KEY:
-          name: prog-cmp-lin-security
-          description: Security compartment for project prog
+          name: ens-cmp-lin-security
+          description: Security compartment for project ens
         CMP-CORE-NETWORK-KEY:
-          name: prog-cmp-lin-network
-          description: Network compartment for project prog
+          name: ens-cmp-lin-network
+          description: Network compartment for project ens
 network_configuration:
   default_enable_cis_checks: false
   default_freeform_tags:
@@ -35,10 +35,10 @@ network_configuration:
       non_vcn_specific_gateways:
         dynamic_routing_gateways:
           DRG-HUB-KEY:
-            display_name: prog-drg-lin-hub
+            display_name: ens-drg-lin-hub
             drg_attachments:
               DRG-HUB-VCN-H-ATTACH-KEY:
-                display_name: prog-drgatt-lin-001
+                display_name: ens-drgatt-lin-001
                 network_details:
                   attached_resource_key: VCN-DEV-KEY
                   type: VCN
@@ -62,19 +62,19 @@ network_configuration:
               src: 0.0.0.0/0
               src_type: CIDR_BLOCK
               stateless: false
-          display_name: prog-vcn-lin-dev
+          display_name: ens-vcn-lin-dev
           dns_label: vcnlindev
           is_ipv6enabled: false
           is_oracle_gua_allocation_enabled: false
           route_tables:
             SUBNET-HUB-RT-KEY:
-              display_name: prog-rt-lin-dev-001
+              display_name: ens-rt-lin-dev-001
               route_rules: {}
           subnets:
             SUBNET-DEV-KEY:
               cidr_block: 172.16.0.64/26
               dhcp_options_key: default_dhcp_options
-              display_name: prog-sn-lin-web
+              display_name: ena-sn-lin-web
               dns_label: snlindevweb
               ipv6cidr_blocks: []
               prohibit_internet_ingress: false
@@ -83,9 +83,9 @@ network_configuration:
               security_list_keys:
               - default_security_list
             SUBNET-DEV-KEY:
-              cidr_block: 10.0.0.0/26
+              cidr_block: 172.16.0.0/26
               dhcp_options_key: default_dhcp_options
-              display_name: prog-sn-lin-app
+              display_name: ena-sn-lin-app
               dns_label: snlindevapp
               ipv6cidr_blocks: []
               prohibit_internet_ingress: true
