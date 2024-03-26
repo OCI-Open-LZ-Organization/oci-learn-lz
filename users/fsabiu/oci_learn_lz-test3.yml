@@ -1,0 +1,23 @@
+# ####################################################################################################### #
+# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #                                            #
+# ####################################################################################################### #
+
+---
+compartments_configuration:
+  enable_delete: true
+  compartments:
+    CMP-CORE-KEY:
+      name: fs-practice-sub
+      parent_id: ocid1.compartment.oc1..aaaaaaaahwdiojmu3jfc7lo5vlvfgs6nlwcihevmaxqch7fo57zscvruhc3a
+      description: Test subcompartment
+      children:
+        CMP-CORE-APP-KEY:
+          name: fs-practice-sub-sub
+          description: Application compartment for project infra
+
+groups_configuration:
+  groups: {}
+dynamic_groups_configuration:
+  dynamic_groups: {}
+policies_configuration: {}
